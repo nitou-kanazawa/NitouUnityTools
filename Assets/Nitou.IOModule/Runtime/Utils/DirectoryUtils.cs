@@ -16,7 +16,6 @@ namespace Nitou.IO {
     /// </summary>
     public static class DirectoryUtils {
 
-
         /// ----------------------------------------------------------------------------
         #region 取得 (Array)
 
@@ -183,6 +182,20 @@ namespace Nitou.IO {
         #endregion
 
 
+        /// ----------------------------------------------------------------------------
+        #region 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static IEnumerable<string> EnumerateDirectoryNames(string path) {
+            return Directory
+                .EnumerateDirectories(path)
+                .Select(dirPath => Path.GetFileName(dirPath));
+        }
+
+        #endregion
+
 
         /// ----------------------------------------------------------------------------
         #region 判定
@@ -240,24 +253,9 @@ namespace Nitou.IO {
 
 
         /// ----------------------------------------------------------------------------
-        #region 
+        #region ディレクトリ操作
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public static IEnumerable<string> EnumerateDirectoryNames(string path) {
-            return Directory
-                .EnumerateDirectories(path)
-                .Select(dirPath => Path.GetFileName(dirPath));
-        }
-
-        #endregion
-
-
-        /// ----------------------------------------------------------------------------
-        #region 操作（コピー）
-
-        //// [REF] Microsoft Learn: ディレクトリをコピーする https://learn.microsoft.com/ja-jp/dotnet/standard/io/how-to-copy-directories
+        // [REF] Microsoft Learn: ディレクトリをコピーする https://learn.microsoft.com/ja-jp/dotnet/standard/io/how-to-copy-directories
 
         /// <summary>
         /// ディレクトリを再帰的にコピーする．
@@ -291,8 +289,6 @@ namespace Nitou.IO {
                 }
             }
         }
-        #endregion
-
 
         /// <summary>
         /// ディレクトリ内の要素を全て削除する．
@@ -302,14 +298,6 @@ namespace Nitou.IO {
             Directory.Delete(path);
             Directory.CreateDirectory(path);
         }
-
-
-
-        //public static string GetUniqDirectoryName() {
-
-
-        //}
-
-
+        #endregion
     }
 }

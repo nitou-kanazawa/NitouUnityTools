@@ -72,16 +72,25 @@ namespace Nitou.IO {
         }
 
         /// <summary>
-        /// 相対パスから絶対パスを取得
+        /// 相対パスから絶対パスを取得する．
         /// </summary>
         public static string GetFullPath(string path) {
             return Path.GetFullPath(path)
                 .ReplaceDelimiter();
         }
 
+        /// <summary>
+        /// 相対パスからAssetsパスを取得する．
+        /// </summary>
+        public static string GetPathFromAssets(string path) {
+            return (new Uri(Application.dataPath))
+                .MakeRelativeUri(new Uri(path))
+                .ToString();
+        }
+
 
         /// --------------------------------------------------------------------
-        // 取得
+        #region 取得
 
         /// <summary>
         /// ディレクトリの名前を取得する．
@@ -147,6 +156,7 @@ namespace Nitou.IO {
             return Path.GetPathRoot(path)
                 .ReplaceDelimiter();
         }
+        #endregion
 
 
         /// --------------------------------------------------------------------
