@@ -1,0 +1,20 @@
+{
+    "name": "Nitou.Tools.Editor",
+    "rootNamespace": "nitou.Tools",
+    "references": [
+        "Nitou.Tools",
+        "Nitou.IO",
+        "Nitou.IO.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
