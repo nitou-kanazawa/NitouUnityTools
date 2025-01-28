@@ -1,0 +1,21 @@
+{
+    "name": "Nitou.Tools.ProjectFolder",
+    "rootNamespace": "Nitou.Tools.ProjectFolder",
+    "references": [
+        "Nitou.Tools",
+        "Nitou.IO"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
