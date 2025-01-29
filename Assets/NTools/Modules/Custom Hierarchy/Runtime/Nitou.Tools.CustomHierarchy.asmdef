@@ -1,0 +1,16 @@
+{
+    "name": "Nitou.Tools.CustomHierarchy",
+    "rootNamespace": "Nitou.Tools.Hierarchy",
+    "references": [
+        "GUID:e466e567eb6fbf64c8614b3ebc59a06a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
